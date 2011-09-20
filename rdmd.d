@@ -260,7 +260,8 @@ private string myOwnTmpDir()
 {
     version (Posix)
     {
-        enum tmpRoot = "/tmp/.rdmd";
+        import core.sys.posix.unistd;
+        auto tmpRoot = "/tmp/.rdmd-" ~ to!string(getuid());
     }
     else version (Windows)
     {
