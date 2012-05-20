@@ -481,7 +481,7 @@ private string[string] getDependencies(string rootModule, string workDir,
 bool anyNewerThan(in string[] files, in string file)
 {
     // Experimental: running isNewer in separate threads, one per file
-    if (false)
+    if (true)
     {
         foreach (source; files)
         {
